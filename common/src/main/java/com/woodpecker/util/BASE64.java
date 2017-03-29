@@ -3,17 +3,17 @@ package com.woodpecker.util;
 import org.apache.commons.codec.binary.Base64;
 
 /**
- * 封装的Base64加解密工具类
+ * 封装的Base64编码工具类
  *
  * @author Glenn
  * @since 2017-03-27
  */
 public final class BASE64 {
     /**
-     * 加密
+     * 编码
      *
-     * @param arg 待加密字符串
-     * @return 加密结果
+     * @param arg 待编码字符串
+     * @return 编码结果
      */
     public static String encode(String arg) {
         String result = "";
@@ -30,10 +30,10 @@ public final class BASE64 {
     }
 
     /**
-     * 解密
+     * 解码
      *
-     * @param arg 待解密字符串
-     * @return 解密结果
+     * @param arg 待解码字符串
+     * @return 解码结果
      */
     public static String decode(String arg) {
         String result = "";
@@ -48,6 +48,11 @@ public final class BASE64 {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(encode("the"));
+        System.out.println(decode("dGhl"));
     }
 
 }

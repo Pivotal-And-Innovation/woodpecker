@@ -4,6 +4,7 @@ import lombok.Cleanup;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
@@ -157,15 +158,20 @@ public final class Logger {
      */
     private static String getExceptionStack(Throwable exception) {
         String var = "@";
-        @Cleanup
-        StringWriter sw = new StringWriter();
-        @Cleanup
-        PrintWriter pw = new PrintWriter(sw);
-        exception.printStackTrace(pw);
-        pw.flush();
-        sw.flush();
+        try {
+            @Cleanup
+            StringWriter sw = new StringWriter();
+            @Cleanup
+            PrintWriter pw = new PrintWriter(sw);
+            exception.printStackTrace(pw);
+            pw.flush();
+            sw.flush();
+            return sw.toString().replaceAll("[\\n\\r]", var);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        return sw.toString().replaceAll("[\\n\\r]", var);
+        return "";
     }
 
 }

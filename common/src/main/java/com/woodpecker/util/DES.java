@@ -65,4 +65,8 @@ public final class DES {
         }
     }
 
+    public static void main(String[] args) {
+        System.out.println(encrypt("tyd"));
+    }
+
 }
