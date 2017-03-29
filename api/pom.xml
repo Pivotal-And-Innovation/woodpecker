@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>woodpecker-parent</artifactId>
+        <groupId>com.woodpecker</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <name>woodpecker-api</name>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>woodpecker-api</artifactId>
+    <description>the api module and the standard represent for the APIS</description>
+
+    <dependencies>
+        <!--lomBok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
