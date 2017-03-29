@@ -6,5 +6,5 @@ package com.woodpecker.config;
  * @author Glenn
  * @since 2017-03-29
  */
-class ApplicationConfig {
+class ApplicationConfiguration {
 }
