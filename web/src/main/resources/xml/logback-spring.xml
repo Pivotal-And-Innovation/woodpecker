@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration scan="true">
-    <property resource="config/log.properties"/>
-    <property name="defaultLogPrefix" value="[JAPP_NAME:the domain name of your application]"/>
-    <property name="appName" value="can your application name" />
+    <property resource="application.properties"/>
+    <property name="defaultLogPrefix" value="[JAPP_NAME:woodpecker.com"/>
+    <property name="appName" value="woodpecker" />
     <property name="facilityIndex" value="LOCAL6" />
     <property name="maxMessageSize" value="50000" />
 

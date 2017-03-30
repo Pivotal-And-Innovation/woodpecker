@@ -14,7 +14,7 @@ import java.util.Date;
  */
 @SuppressWarnings("all")
 @Data
-@Builder
+//@Builder
 @Accessors(chain = true)
 @RequiredArgsConstructor(staticName = "of")
 public class WoodUserInfo {
@@ -140,8 +140,8 @@ public class WoodUserInfo {
         System.out.println(userInfo.toString());
 
         // 验证构建器模式-测试不通过
-        WoodUserInfo woodUserInfo = WoodUserInfo.builder().password("343543463").name("Glenn").build();
-        System.out.println(woodUserInfo.toString());
+//        WoodUserInfo woodUserInfo = WoodUserInfo.builder().password("343543463").name("Glenn").build();
+//        System.out.println(woodUserInfo.toString());
 
         // 验证自己写的标准的构建器模式
         WoodUserInfo info1 = new WoodUserInfo.Builder("thy", "2323243546577878979").name("Glenn").email("422624843@qq.com").build();
