@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true">
+    <property resource="config/log.properties"/>
+    <property name="defaultLogPrefix" value="[JAPP_NAME:the domain name of your application]"/>
+    <property name="appName" value="can your application name" />
+    <property name="facilityIndex" value="LOCAL6" />
+    <property name="maxMessageSize" value="50000" />
+
+    <!--console-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!--normal-->
+    <appender name="normalAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <File>${log.dir}/woodpecker.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>
+                ${log.dir}/history/woodpecker.%d{yyyyMMdd}.log
+            </FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d [%thread] %-5level %logger{36} %line - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <!--info-->
+    <appender name="infoAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <File>${log.dir}/woodpecker_info.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.dir}/history/woodpecker_info.%d{yyyyMMdd}.log
+            </FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d [%thread] %-5level %logger{36} %line - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <!--error-->
+    <appender name="errorAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <File>${log.dir}/woodpecker_error.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.dir}/history/woodpecker_error.%d{yyyyMMdd}.log
+            </FileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d [%thread] %-5level %logger{36} %line - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <!--sys info-->
+    <appender name="sysLogInfoAppender" class="ch.qos.logback.classic.net.SyslogAppender">
+        <syslogHost>${sysIpAddress}</syslogHost>
+        <facility>${facilityIndex}</facility>
+        <maxMessageSize>${maxMessageSize}</maxMessageSize>
+        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyyMM}/info.%d{yyyyMMdd}.log] | %d | 0 | 0 | 0 | ${appName} | 0
+            | %d [%thread]%-5level %logger{36} %line - %msg%n</suffixPattern>
+    </appender>
+
+    <!--sys error-->
+    <appender name="sysLogErrorAppender" class="ch.qos.logback.classic.net.SyslogAppender">
+        <syslogHost>${sysIpAddress}</syslogHost>
+        <facility>${facilityIndex}</facility>
+        <maxMessageSize>${maxMessageSize}</maxMessageSize>
+        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyyMM}/error.%d{yyyyMMdd}.log] | %d | 0 | 0 | 0 | ${appName} | 0
+            | %d [%thread] %-5level %logger{36} %line - %msg%n</suffixPattern>
+    </appender>
+
+    <!--sys alarm-->
+    <appender name="sysLogAlarmAppender" class="ch.qos.logback.classic.net.SyslogAppender">
+        <syslogHost>${sysIpAddress}</syslogHost>
+        <facility>${facilityIndex}</facility>
+        <maxMessageSize>${maxMessageSize}</maxMessageSize>
+        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyyMM}/warn.%d{yyyyMMdd}.log] | %d | %X{server_ip} | %X{client_ip} |
+            %X{control_name} | ${appName} | %X{ret_message} | %X{appendMsg}%n</suffixPattern>
+    </appender>
+
+    <!--&lt;!&ndash;本地日志及线上info日志&ndash;&gt;-->
+    <logger name="com.woodpecker" additivity="false">
+        <level value="INFO" />
+        <appender-ref ref="infoAppender" />
+        <appender-ref ref="errorAppender" />
+        <appender-ref ref="sysLogInfoAppender" />
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="normalAppender" />
+    </root>
+
+</configuration>

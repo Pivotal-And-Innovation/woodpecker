@@ -4,19 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--@author Glenn-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>1.5.1.RELEASE</version>
+        <relativePath/>
+    </parent>
+
     <groupId>com.woodpecker</groupId>
     <artifactId>woodpecker-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
-    <!--lookup parent from repository-->
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.1.RELEASE</version>
-        <relativePath/>
-    </parent>
 
     <modules>
         <module>api</module>
@@ -27,27 +25,33 @@
     </modules>
 
     <name>woodpecker</name>
-    <url>https://glenen.github.io/</url>
+    <url>https://github.com/Super-SpiderMan/woodpecker</url>
     <description>the parent pom for the application woodpecker</description>
+
+    <developers>
+        <developer>
+            <id>22</id>
+            <name>Glenn</name>
+            <email>422624843@qq.com</email>
+            <url>https://glenen.github.io/</url>
+            <organization>Super-SpiderMan</organization>
+            <organizationUrl>https://github.com/Super-SpiderMan</organizationUrl>
+            <roles>
+                <role>Project lead</role>
+            </roles>
+        </developer>
+    </developers>
 
     <!--依赖版本号集中管理：均以artifactId.version结尾-->
     <properties>
         <java-version>1.8</java-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <lombok.version>1.16.14</lombok.version>
-        <spring-boot-starter.version>1.5.1.RELEASE</spring-boot-starter.version>
-        <spring-boot-starter-web.version>1.5.1.RELEASE</spring-boot-starter-web.version>
-        <spring-boot-configuration-processor.version>1.5.1.RELEASE</spring-boot-configuration-processor.version>
-        <spring-boot-starter-test.version>1.5.1.RELEASE</spring-boot-starter-test.version>
+        <spring.version>4.3.6.RELEASE</spring.version>
         <!--spring大家族版本号-->
         <springframework.version>4.3.3.RELEASE</springframework.version>
         <spring-data-commons.version>1.9.1.RELEASE</spring-data-commons.version>
-        <junit.version>4.11</junit.version>
         <guava.version>18.0</guava.version>
-        <slf4j-api.version>1.7.21</slf4j-api.version>
-        <logback-classic.version>1.1.3</logback-classic.version>
-        <logback-core.version>1.1.3</logback-core.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-io.version>1.3.2</commons-io.version>
         <commons-lang.version>2.6</commons-lang.version>
@@ -57,7 +61,6 @@
         <dubbo.version>2.5.3</dubbo.version>
         <zookeeper.version>3.5.2-alpha</zookeeper.version>
         <zkclient.version>0.1</zkclient.version>
-        <mysql-connector-java.version>5.1.34</mysql-connector-java.version>
         <c3p0.version>0.9.1.1</c3p0.version>
         <fastjson.version>1.1.15</fastjson.version>
         <rocketmq-client.version>3.2.5</rocketmq-client.version>
@@ -65,195 +68,26 @@
         <mybatis.version>3.2.5</mybatis.version>
         <mybatis-spring.version>1.2.3</mybatis-spring.version>
         <pagehelper.version>4.1.6</pagehelper.version>
-        <aspectjweaver.version>1.8.9</aspectjweaver.version>
         <netty-all.version>4.0.27.Final</netty-all.version>
         <commons-httpclient.version>3.1</commons-httpclient.version>
-        <httpclient.version>4.3.1</httpclient.version>
-        <httpmime.version>4.5.1</httpmime.version>
         <shiro-core.version>1.2.6</shiro-core.version>
         <quartz.version>2.2.3</quartz.version>
-        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
         <thymeleaf-spring4.version>2.1.4.RELEASE</thymeleaf-spring4.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!--springBoot-->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-                <version>${spring-boot-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring-boot-starter-web.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-configuration-processor</artifactId>
-                <version>${spring-boot-configuration-processor.version}</version>
-                <optional>true</optional>
-            </dependency>
-
-            <!--springBoot test-->
-            <!--<dependency>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-starter-test</artifactId>-->
-                <!--<version>${spring-boot-starter-test.version}</version>-->
-                <!--<scope>test</scope>-->
-            <!--</dependency>-->
-
-            <!--junit-->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!--lomBok-->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <!--guava-->
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-
-            <!--json-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
-
-            <!--rocketMQ-->
-            <dependency>
-                <groupId>com.alibaba.rocketmq</groupId>
-                <artifactId>rocketmq-client</artifactId>
-                <version>${rocketmq-client.version}</version>
-            </dependency>
-
-            <!--POI excel-->
-            <dependency>
-                <groupId>org.apache.poi</groupId>
-                <artifactId>poi</artifactId>
-                <version>${poi.version}</version>
-            </dependency>
-
-            <!--duBbo-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
                 <exclusions>
                     <exclusion>
-                        <groupId>org.springFramework</groupId>
-                        <artifactId>spring</artifactId>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
-            <dependency>
-                <groupId>org.apache.zookeeper</groupId>
-                <artifactId>zookeeper</artifactId>
-                <version>${zookeeper.version}</version>
-                <!--排斥该依赖采用的记录日志组合，采用我们们配置的self4j加logback，否则会出现记录日志冲突(没别的影响，但影响视觉)-->
-                <exclusions>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>com.github.sgroschupf</groupId>
-                <artifactId>zkclient</artifactId>
-                <version>${zkclient.version}</version>
-                <!--排除log4j，用我们引入的logback-->
-                <exclusions>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <!--mysql-->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql-connector-java.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>c3p0</groupId>
-                <artifactId>c3p0</artifactId>
-                <version>${c3p0.version}</version>
-            </dependency>
-
-            <!--mybatis-->
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis-spring.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>spring-tx</artifactId>
-                        <groupId>org.springframework</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>spring-jdbc</artifactId>
-                        <groupId>org.springframework</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <!--分页插件-->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
-                <version>${pagehelper.version}</version>
-            </dependency>
-
-            <!--aspectj-->
-            <dependency>
-                <groupId>org.aspectj</groupId>
-                <artifactId>aspectjweaver</artifactId>
-                <version>${aspectjweaver.version}</version>
-            </dependency>
-
-            <!--log-->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback-classic.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
-                <version>${logback-core.version}</version>
-            </dependency>
-
             <!--spring大家族-->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -282,11 +116,6 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-core</artifactId>
-                <version>${springframework.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
                 <artifactId>spring-expression</artifactId>
                 <version>${springframework.version}</version>
             </dependency>
@@ -298,11 +127,6 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
-                <version>${springframework.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
                 <version>${springframework.version}</version>
             </dependency>
             <dependency>
@@ -363,6 +187,106 @@
                 <version>${commons-fileupload.version}</version>
             </dependency>
 
+            <!--guava-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+            <!--json-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!--rocketMQ-->
+            <dependency>
+                <groupId>com.alibaba.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq-client.version}</version>
+            </dependency>
+            <!--POI excel-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <!--duBbo-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springFramework</groupId>
+                        <artifactId>spring</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <!--排斥该依赖采用的记录日志组合，采用我们们配置的self4j加logback，否则会出现记录日志冲突(没别的影响，但影响视觉)-->
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+                <!--排除log4j，用我们引入的logback-->
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!--c3p0-->
+            <dependency>
+                <groupId>c3p0</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0.version}</version>
+            </dependency>
+            <!--mybatis-->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>spring-tx</artifactId>
+                        <groupId>org.springframework</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>spring-jdbc</artifactId>
+                        <groupId>org.springframework</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!--分页插件-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
             <!--thymeleaf模版引擎-->
             <dependency>
                 <groupId>org.thymeleaf</groupId>
@@ -376,38 +300,6 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-
-            <!--http-->
-            <dependency>
-                <groupId>commons-httpclient</groupId>
-                <artifactId>commons-httpclient</artifactId>
-                <version>${commons-httpclient.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>${httpclient.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpmime</artifactId>
-                <version>${httpmime.version}</version>
-            </dependency>
-
-            <!--netty-->
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>${netty-all.version}</version>
-            </dependency>
-
-            <!--shIro权限管理框架-->
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-core</artifactId>
-                <version>${shiro-core.version}</version>
-            </dependency>
-
             <!--quartz定时框架，简单时可用定时线程池代替，但此框架与spring兼容更好-->
             <dependency>
                 <groupId>org.quartz-scheduler</groupId>
@@ -419,26 +311,55 @@
                 <artifactId>quartz-jobs</artifactId>
                 <version>${quartz.version}</version>
             </dependency>
-
-            <!--servlet-->
+            <!--http-->
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>${javax.servlet-api.version}</version>
+                <groupId>commons-httpclient</groupId>
+                <artifactId>commons-httpclient</artifactId>
+                <version>${commons-httpclient.version}</version>
             </dependency>
-
+            <!--netty-->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty-all.version}</version>
+            </dependency>
+            <!--shIro权限管理框架-->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro-core.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <!--项目打包插件-->
     <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/application*.yml</include>
+                    <include>**/application*.properties</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <excludes>
+                    <exclude>**/application*.yml</exclude>
+                    <exclude>**/application*.properties</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.3.3.RELEASE</version>
+                <version>1.5.1.RELEASE</version>
                 <configuration>
                     <mainClass>com.woodpecker.ApplicationMain</mainClass>
+                    <!--<fork>true</fork>-->
                 </configuration>
                 <executions>
                     <execution>
@@ -510,44 +431,5 @@
             <url>http://nexus.hrbbwx.com/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
-    <!--以下为用http://start.spring.io/ 创建springBoot项目时自动生成的-->
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>spring-snapshots</id>-->
-            <!--<name>Spring Snapshots</name>-->
-            <!--<url>https://repo.spring.io/snapshot</url>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
-        <!--<repository>-->
-            <!--<id>spring-milestones</id>-->
-            <!--<name>Spring Milestones</name>-->
-            <!--<url>https://repo.spring.io/milestone</url>-->
-            <!--<snapshots>-->
-                <!--<enabled>false</enabled>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
-    <!--</repositories>-->
-
-    <!--<pluginRepositories>-->
-        <!--<pluginRepository>-->
-            <!--<id>spring-snapshots</id>-->
-            <!--<name>Spring Snapshots</name>-->
-            <!--<url>https://repo.spring.io/snapshot</url>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
-        <!--</pluginRepository>-->
-        <!--<pluginRepository>-->
-            <!--<id>spring-milestones</id>-->
-            <!--<name>Spring Milestones</name>-->
-            <!--<url>https://repo.spring.io/milestone</url>-->
-            <!--<snapshots>-->
-                <!--<enabled>false</enabled>-->
-            <!--</snapshots>-->
-        <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
 
 </project>
