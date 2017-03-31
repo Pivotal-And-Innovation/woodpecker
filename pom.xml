@@ -25,7 +25,7 @@
     </modules>
 
     <name>woodpecker</name>
-    <url>https://github.com/Super-SpiderMan/woodpecker</url>
+    <url>https://github.com/Pivotal-And-Innovation/woodpecker</url>
     <description>the parent pom for the application woodpecker</description>
 
     <developers>
@@ -34,8 +34,8 @@
             <name>Glenn</name>
             <email>422624843@qq.com</email>
             <url>https://glenen.github.io/</url>
-            <organization>Super-SpiderMan</organization>
-            <organizationUrl>https://github.com/Super-SpiderMan</organizationUrl>
+            <organization>Pivotal-And-Innovation</organization>
+            <organizationUrl>https://github.com/Pivotal-And-Innovation</organizationUrl>
             <roles>
                 <role>Project lead</role>
             </roles>

@@ -20,6 +20,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
     </dependencies>
 
     <!--加载编译XML数据库SQL - 必须-->

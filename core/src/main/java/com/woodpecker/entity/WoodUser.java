@@ -17,7 +17,7 @@ import java.util.Date;
 //@Builder
 @Accessors(chain = true)
 @RequiredArgsConstructor(staticName = "of")
-public class WoodUserInfo {
+public class WoodUser {
     /**
      * 记录ID
      */
@@ -113,12 +113,12 @@ public class WoodUserInfo {
             return this;
         }
 
-        public WoodUserInfo build() {
-            return new WoodUserInfo(this);
+        public WoodUser build() {
+            return new WoodUser(this);
         }
     }
 
-    private WoodUserInfo(Builder builder) {
+    private WoodUser(Builder builder) {
         this.uuid = builder.uuid;
         this.name = builder.name;
         this.nickname = builder.nickname;
@@ -132,19 +132,19 @@ public class WoodUserInfo {
 
     public static void main(String[] args) {
         // 验证链式调用
-        WoodUserInfo info = new WoodUserInfo("dyeDha").setEmail("422624843@qq.com").setName("Glenn").setNickname("就是帅！");
+        WoodUser info = new WoodUser("dyeDha").setEmail("422624843@qq.com").setName("Glenn").setNickname("就是帅！");
         System.out.println(info.toString());
 
         // 验证必要带有必须参数的构造器
-        WoodUserInfo userInfo = WoodUserInfo.of("dyeDha").setIdNum("38438784649856486745");
+        WoodUser userInfo = WoodUser.of("dyeDha").setIdNum("38438784649856486745");
         System.out.println(userInfo.toString());
 
         // 验证构建器模式-测试不通过
-//        WoodUserInfo woodUserInfo = WoodUserInfo.builder().password("343543463").name("Glenn").build();
+//        WoodUser woodUserInfo = WoodUser.builder().password("343543463").name("Glenn").build();
 //        System.out.println(woodUserInfo.toString());
 
         // 验证自己写的标准的构建器模式
-        WoodUserInfo info1 = new WoodUserInfo.Builder("thy", "2323243546577878979").name("Glenn").email("422624843@qq.com").build();
+        WoodUser info1 = new WoodUser.Builder("thy", "2323243546577878979").name("Glenn").email("422624843@qq.com").build();
         System.out.println(info1.toString());
     }
 

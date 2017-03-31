@@ -48,7 +48,7 @@ class DataBaseConfiguration {
     @Value("${jdbc.maxStatements}")
     private int maxStatements;
 
-    @Bean(value = "dataSource", destroyMethod = "close")
+    @Bean(name = "dataSource", destroyMethod = "close")
     public ComboPooledDataSource DataSource() throws Exception {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass(driver);
@@ -68,7 +68,7 @@ class DataBaseConfiguration {
         return dataSource;
     }
 
-    @Bean(value = "sqlSessionFactory")
+    @Bean(name = "sqlSessionFactory")
     public SqlSessionFactoryBean factoryBean() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         Resource[] resource = {new ClassPathResource("classpath:com/woodpecker/mapper/*.xml")};
@@ -78,14 +78,14 @@ class DataBaseConfiguration {
         return factoryBean;
     }
 
-    @Bean(value = "transactionManager")
+    @Bean(name = "transactionManager")
     public DataSourceTransactionManager TransactionManager() throws Exception {
         DataSourceTransactionManager manager = new DataSourceTransactionManager();
         manager.setDataSource(DataSource());
         return manager;
     }
 
-    @Bean(value = "mapperScannerConfigurer")
+    @Bean(name = "mapperScannerConfigurer")
     public MapperScannerConfigurer mapperConfig() throws Exception {
         MapperScannerConfigurer configurer = new MapperScannerConfigurer();
         configurer.setBasePackage("com.woodpecker.mapper");
@@ -97,11 +97,11 @@ class DataBaseConfiguration {
      * 以下为多数据源时候的配置
      */
     /*
-    @Bean(value = "dataSourceAspect")
+    @Bean(name = "dataSourceAspect")
     public DataSourceAspect dataSourceAspect() {
         return new DataSourceAspect();
     }
-    @Bean(value = "dataSourceRouter")
+    @Bean(name = "dataSourceRouter")
     public DataSourceRouter dataSourceRouter() throws Exception {
         DataSourceRouter router = new DataSourceRouter();
         Map<Object, Object> map = new HashMap<>();

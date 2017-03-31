@@ -10,6 +10,7 @@ import java.util.Stack;
  * @author Glenn
  * @since 2017-03-25
  */
+@SuppressWarnings("all")
 public class BinaryTreeTraversal {
 
     /**
@@ -17,17 +18,89 @@ public class BinaryTreeTraversal {
      *
      * @param head 头节点
      */
-    public void preTraversal(Node head) {
+    public static void preTraversal(Node head) {
         if (head == null) {
             return;
-        }
-        Stack<Node> temp = new Stack<>();
-        while (head != null && !temp.isEmpty()) {
+        } else {
+            System.out.print("preTraversal:");
+            Stack<Node> temp = new Stack<>();
+            // 头节点压入栈
             temp.push(head);
-            System.out.println(head.getDataValue());
-            head = head.left;
-
+            while (!temp.isEmpty()) {
+                head = temp.pop();
+                System.out.print(head.dataValue + " ");
+                // 右孩子先入栈
+                if (head.right != null) {
+                    temp.push(head.right);
+                }
+                // 左孩子后入栈
+                if (head.left != null) {
+                    temp.push(head.left);
+                }
+            }
         }
+        System.out.println();
+    }
+
+    /**
+     * 二叉树中序遍历：借助栈和神级遍历
+     *
+     * @param head 头节点
+     */
+    public static void midTraversal(Node head) {
+        if (head == null) {
+            return;
+        } else {
+            System.out.print("midTraversal:");
+            Stack<Node> temp = new Stack<>();
+            temp.push(head);
+            while (!temp.isEmpty() || head != null) {
+                // 连续把二叉树最左一条斜线上的节点压入栈
+                if (head.left != null) {
+                    temp.push(head.left);
+                    head = head.left;
+                // 弹出栈顶节点，让其右孩子继续上述过程
+                } else {
+                    head = temp.pop();
+                    System.out.print(head.dataValue + " ");
+                    head = head.right;
+                }
+            }
+        }
+        System.out.println();
+    }
+
+    /**
+     * 二叉树后序遍历：借助栈和神级遍历
+     *
+     * @param head 头节点
+     */
+    public static void behTraversal(Node head) {
+        if (head == null) {
+            return;
+        } else {
+            // 借助两个栈来完成
+            Stack<Node> temp1 = new Stack<>();
+            Stack<Node> temp2 = new Stack<>();
+            System.out.print("behTraversal:");
+            temp1.push(head);
+            while (!temp1.isEmpty()) {
+                head = temp1.pop();
+                temp2.push(head);
+                // 入栈顺序很重要
+                if (head.left != null) {
+                    temp1.push(head.left);
+                }
+                if (head.right != null) {
+                    temp1.push(head.right);
+                }
+            }
+            // temp2栈中的顺序已是后序
+            while (!temp2.isEmpty()) {
+                System.out.print(temp2.pop() + " ");
+            }
+        }
+        System.out.println();
     }
 
     /**

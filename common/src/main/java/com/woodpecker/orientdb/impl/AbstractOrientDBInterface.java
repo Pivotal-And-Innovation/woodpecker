@@ -1,6 +1,5 @@
 package com.woodpecker.orientdb.impl;
 
-import com.tinkerpop.blueprints.impls.orient.OrientGraphFactory;
 import com.woodpecker.orientdb.OrientDBInterface;
 import com.woodpecker.orientdb.entity.EdgeDefinition;
 import com.woodpecker.orientdb.entity.VertexDefinition;
@@ -12,10 +11,10 @@ import com.woodpecker.orientdb.entity.VertexDefinition;
  * @since 2017-03-30
  */
 public class AbstractOrientDBInterface implements OrientDBInterface {
-    private OrientGraphFactory orientGraphFactory;
-    public void setOrientGraphFactory(OrientGraphFactory orientGraphFactory) {
-        this.orientGraphFactory = orientGraphFactory;
-    }
+//    private OrientGraphFactory orientGraphFactory;
+//    public void setOrientGraphFactory(OrientGraphFactory orientGraphFactory) {
+//        this.orientGraphFactory = orientGraphFactory;
+//    }
 
     /**
      * 源顶点到目标顶点建立出边关系

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 @Configuration
 @ComponentScan(basePackageClasses = {ApplicationMain.class}, excludeFilters = @ComponentScan.Filter({Controller.class,
         Configuration.class}))
-//@ImportResource(value = "classpath:spring/mybatis-config.xml")
+@ImportResource(value = "classpath:spring/mybatis-config.xml")
 class ApplicationConfiguration {
+
 }

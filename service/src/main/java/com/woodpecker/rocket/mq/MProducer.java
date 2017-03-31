@@ -1,5 +1,8 @@
 package com.woodpecker.rocket.mq;
 
+import com.alibaba.rocketmq.client.producer.DefaultMQProducer;
+import com.alibaba.rocketmq.client.producer.SendResult;
+import com.alibaba.rocketmq.common.message.Message;
 import com.woodpecker.common.CommonThreadFactory;
 import com.woodpecker.util.Logger;
 
@@ -8,6 +11,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
+import javax.annotation.Resource;
+
 /**
  * 消息生产者:Demo
  *
@@ -15,6 +20,8 @@ import java.util.concurrent.atomic.AtomicLong;
  * @since 2017-03-29
  */
 public class MProducer {
+
+    @Resource
     private DefaultMQProducer mqProducer;
 
     private static ScheduledExecutorService scheduledExecutorService;
