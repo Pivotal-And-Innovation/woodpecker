@@ -1,7 +1,6 @@
 package com.woodpecker.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.beans.factory.annotation.Value;
@@ -70,13 +69,13 @@ class DataBaseConfiguration {
     }
 
     @Bean(value = "sqlSessionFactory")
-    public SqlSessionFactory factoryBean() throws Exception {
+    public SqlSessionFactoryBean factoryBean() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         Resource[] resource = {new ClassPathResource("classpath:com/woodpecker/mapper/*.xml")};
         factoryBean.setDataSource(DataSource());
         factoryBean.setMapperLocations(resource);
         factoryBean.setConfigLocation(new PathResource("classpath:xml/datasource-config.xml"));
-        return factoryBean.getObject();
+        return factoryBean;
     }
 
     @Bean(value = "transactionManager")
