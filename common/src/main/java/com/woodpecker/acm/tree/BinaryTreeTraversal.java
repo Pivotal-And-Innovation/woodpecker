@@ -19,6 +19,9 @@ public class BinaryTreeTraversal {
      * @param head 头节点
      */
     public static void preTraversal(Node head) {
+        /**
+         * 借助栈
+         */
         if (head == null) {
             return;
         } else {
@@ -64,6 +67,35 @@ public class BinaryTreeTraversal {
                     head = temp.pop();
                     System.out.print(head.dataValue + " ");
                     head = head.right;
+                }
+            }
+        }
+        System.out.println();
+        /**
+         * Morris遍历
+         */
+        if (head == null) {
+            return;
+        } else {
+            System.out.print("midTraversal:");
+            Node cur1 = head;
+            Node cur2 = null;
+            while (cur1 != null) {
+                cur2 = cur1.left;
+                if (cur2 != null) {
+                    while (cur2.right != null && cur2.right != cur1) {
+                        cur2 = cur2.right;
+                    }
+                    if (cur2.right == null) {
+                        // 把以cur1为头节点的左子树最右节点的right空指针指向cur1
+                        cur2.right = cur1;
+                        cur1 = cur1.left;
+                        continue;
+                    } else {
+                        cur2.right = null;
+                    }
+                    System.out.print(cur1.dataValue + " ");
+                    cur1 = cur1.right;
                 }
             }
         }
