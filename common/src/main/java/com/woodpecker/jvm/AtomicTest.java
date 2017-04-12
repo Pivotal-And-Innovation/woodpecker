@@ -12,7 +12,7 @@ public class AtomicTest {
 
     private static final int THREAD_COUNT = 20;
     private static AtomicInteger race = new AtomicInteger(0);
-    //private static int race = 0;
+    //private stat int race = 0;
 
     private static void increase() {
         race.incrementAndGet();
