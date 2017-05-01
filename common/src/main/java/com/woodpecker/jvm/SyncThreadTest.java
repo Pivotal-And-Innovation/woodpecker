@@ -5,8 +5,6 @@
 
 package com.woodpecker.jvm;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * Thread 测试
  *
@@ -26,7 +24,8 @@ public class SyncThreadTest {
         });
 
         holdThread.start();
-        TimeUnit.SECONDS.sleep(30);
+        Thread.sleep(300);
+        //TimeUnit.SECONDS.sleep(3);
         isStop = true;
         System.out.println(count);
     }
