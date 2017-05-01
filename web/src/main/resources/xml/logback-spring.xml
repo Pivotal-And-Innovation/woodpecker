@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration scan="true">
+    <contextName>logback-spring</contextName>
+    <!-- 可在配置文件中配置，也可直接写在该配置XML文件中-->
+    <!--<property name="log.path" value="logs/woodpecker" />-->
+    <!--<property name="sysIpAddress" value="127.0.0.1" />-->
     <property resource="application.properties"/>
     <property name="defaultLogPrefix" value="[JAPP_NAME:woodpecker.com"/>
     <property name="appName" value="woodpecker" />
@@ -8,6 +12,9 @@
 
     <!--console-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
         <encoder>
             <pattern>
                 %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n
@@ -20,10 +27,10 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>
         </filter>
-        <File>${log.dir}/woodpecker.log</File>
+        <File>${log.path}/woodpecker.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>
-                ${log.dir}/history/woodpecker.%d{yyyyMMdd}.log
+                ${log.path}/history/woodpecker.%d{yyyy-MM-dd}.log
             </FileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -38,9 +45,9 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>
         </filter>
-        <File>${log.dir}/woodpecker_info.log</File>
+        <File>${log.path}/woodpecker_info.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log.dir}/history/woodpecker_info.%d{yyyyMMdd}.log
+            <FileNamePattern>${log.path}/history/woodpecker_info.%d{yyyy-MM-dd}.log
             </FileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -55,9 +62,9 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
         </filter>
-        <File>${log.dir}/woodpecker_error.log</File>
+        <File>${log.path}/woodpecker_error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>${log.dir}/history/woodpecker_error.%d{yyyyMMdd}.log
+            <FileNamePattern>${log.path}/history/woodpecker_error.%d{yyyy-MM-dd}.log
             </FileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
@@ -72,7 +79,7 @@
         <syslogHost>${sysIpAddress}</syslogHost>
         <facility>${facilityIndex}</facility>
         <maxMessageSize>${maxMessageSize}</maxMessageSize>
-        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyyMM}/info.%d{yyyyMMdd}.log] | %d | 0 | 0 | 0 | ${appName} | 0
+        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyy-MM}/info.%d{yyyy-MM-dd}.log] | %d | 0 | 0 | 0 | ${appName} | 0
             | %d [%thread]%-5level %logger{36} %line - %msg%n</suffixPattern>
     </appender>
 
@@ -81,7 +88,7 @@
         <syslogHost>${sysIpAddress}</syslogHost>
         <facility>${facilityIndex}</facility>
         <maxMessageSize>${maxMessageSize}</maxMessageSize>
-        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyyMM}/error.%d{yyyyMMdd}.log] | %d | 0 | 0 | 0 | ${appName} | 0
+        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyy-MM}/error.%d{yyyy-MM-dd}.log] | %d | 0 | 0 | 0 | ${appName} | 0
             | %d [%thread] %-5level %logger{36} %line - %msg%n</suffixPattern>
     </appender>
 
@@ -90,7 +97,7 @@
         <syslogHost>${sysIpAddress}</syslogHost>
         <facility>${facilityIndex}</facility>
         <maxMessageSize>${maxMessageSize}</maxMessageSize>
-        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyyMM}/warn.%d{yyyyMMdd}.log] | %d | %X{server_ip} | %X{client_ip} |
+        <suffixPattern>${defaultLogPrefix} [PATH:/woodpecker/%d{yyyy-MM}/warn.%d{yyyy-MM-dd}.log] | %d | %X{server_ip} | %X{client_ip} |
             %X{control_name} | ${appName} | %X{ret_message} | %X{appendMsg}%n</suffixPattern>
     </appender>
 
@@ -106,5 +113,14 @@
         <appender-ref ref="STDOUT" />
         <appender-ref ref="normalAppender" />
     </root>
+
+    <!--多环境日志输出配置： 测试环境+开发环境. 多个使用逗号隔开. -->
+    <!--<springProfile name="test,dev">-->
+        <!--<logger name="com.woodpecker" level="info" />-->
+    <!--</springProfile>-->
+    <!--&lt;!&ndash; 生产环境. &ndash;&gt;-->
+    <!--<springProfile name="prod">-->
+        <!--<logger name="com.woodpecker" level="ERROR" />-->
+    <!--</springProfile>-->
 
 </configuration>

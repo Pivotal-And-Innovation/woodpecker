@@ -19,7 +19,9 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 import org.thymeleaf.templateresolver.TemplateResolver;
 
 /**
- * WebMVC的javaConfig配置，替代XML配置bean
+ * WebMVC的javaConfig配置，替代XML配置bean：自定义可控的Spring MVC
+ * 如果想保留Spring Boot MVC的特性，并只是添加其他的MVC配置(拦截器，formatter，视图控制器等)，
+ * 继承WebMvcConfigurerAdapter 并重写其中的一些方法添加自己想要的@Bean即可
  *
  * @author Glenn
  * @since 2017-03-29
@@ -36,9 +38,13 @@ class WebMvcConfiguration extends WebMvcConfigurationSupport {
         requestMappingHandlerMapping.setUseTrailingSlashMatch(false);
         return requestMappingHandlerMapping;
     }
+
+    /**
+     * 加载静态资源文件
+     */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler(Path.RESOURCES_HANDLER).addResourceLocations(Path.RESOURCES_LOCATION);
+        registry.addResourceHandler(StaticResourcePath.RESOURCES_HANDLER).addResourceLocations(StaticResourcePath.RESOURCES_LOCATION);
     }
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -48,7 +54,7 @@ class WebMvcConfiguration extends WebMvcConfigurationSupport {
     @Bean(name = "messageSource")
     public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-        messageSource.setBasename(Path.MESSAGE_SOURCE);
+        messageSource.setBasename(StaticResourcePath.MESSAGE_SOURCE);
         messageSource.setCacheSeconds(5);
         return messageSource;
     }
@@ -56,7 +62,7 @@ class WebMvcConfiguration extends WebMvcConfigurationSupport {
     @Bean(name = "templateResolver")
     public TemplateResolver templateResolver() {
         TemplateResolver templateResolver = new ServletContextTemplateResolver();
-        templateResolver.setPrefix(Path.VIEWS);
+        templateResolver.setPrefix(StaticResourcePath.VIEWS);
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode("HTML5");
         templateResolver.setCacheable(false);
@@ -89,7 +95,7 @@ class WebMvcConfiguration extends WebMvcConfigurationSupport {
     /**
      * 路径常量类
      */
-    private final static class Path{
+    private static final class StaticResourcePath{
         private static final String MESSAGE_SOURCE = "/WEB-INF/i18n/messages";
         private static final String VIEWS = "/WEB-INF/views/";
         private static final String RESOURCES_LOCATION = "/resources/";
