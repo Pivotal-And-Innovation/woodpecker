@@ -1,6 +1,6 @@
 /*
  * www.beebank.com Inc.
- * Copyright (c) 2017 All Rights Reserved.
+ * Copyright (c) 2017年03月30日 All Rights Reserved.
  */
 
 package com.woodpecker.jvm;
@@ -8,8 +8,8 @@ package com.woodpecker.jvm;
 /**
  * Thread 测试
  *
- * @author Glenn
- * @since 2017-03-14
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class SyncThreadTest {
 

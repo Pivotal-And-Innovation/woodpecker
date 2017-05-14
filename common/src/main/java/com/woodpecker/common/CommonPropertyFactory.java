@@ -11,8 +11,8 @@ import java.util.Properties;
 /**
  * 从property配置文件读取配置类
  *
- * @author Glenn
- * @since 2017-03-28
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class CommonPropertyFactory extends PropertyPlaceholderConfigurer {
 

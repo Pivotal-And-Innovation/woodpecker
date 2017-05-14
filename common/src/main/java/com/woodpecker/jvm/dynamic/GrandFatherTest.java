@@ -8,8 +8,8 @@ import java.lang.invoke.MethodType;
 /**
  * 子类调用祖类方法演示
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("unused")
 public class GrandFatherTest {

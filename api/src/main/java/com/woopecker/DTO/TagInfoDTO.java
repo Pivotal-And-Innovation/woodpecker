@@ -9,8 +9,8 @@ import java.util.Map;
 /**
  * 需更新节点信息传输模型
  *
- * @author Glenn
- * @since 2017-03-25
+ * @author Relax
+ * @since 2017年03月30日
  */
 @Getter
 @Setter

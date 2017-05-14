@@ -8,8 +8,8 @@ package com.woodpecker.jvm.passive;
  *
  * 3、常量在编译阶段会存入调用类的常量池，本质上并没有直接引用到定义常量的类，因此不会触发定义常量的类的初始化。其实在编译阶段通过常量传播优化
  *
- * @author Glenn
- * @since 2017-03-23
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("unused")
 public class NotInitializationTest {

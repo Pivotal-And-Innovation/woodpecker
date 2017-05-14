@@ -10,8 +10,8 @@ import java.util.Map;
 /**
  * http请求配置
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 @Getter
 @Setter

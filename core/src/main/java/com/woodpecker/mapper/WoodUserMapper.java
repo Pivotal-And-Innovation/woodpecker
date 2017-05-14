@@ -8,8 +8,8 @@ import java.util.List;
 /**
  * 用户信息mapper代理
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 public interface WoodUserMapper {
     /**

@@ -6,8 +6,8 @@ import java.lang.reflect.Constructor;
 /**
  * 验证序列化、反射、克隆对单列模式对破坏：当然，这些问题都可以利用单元素枚举类来解决
  *
- * @author Glenn
- * @since 2017-03-28
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("all")
 public class Singleton implements Serializable, Cloneable {

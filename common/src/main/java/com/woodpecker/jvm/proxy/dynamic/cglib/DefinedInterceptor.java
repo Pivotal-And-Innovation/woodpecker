@@ -9,8 +9,8 @@ import java.lang.reflect.Method;
 /**
  * 自定义方法拦截器
  *
- * @author Glenn
- * @since 2017-04-12
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("all")
 public class DefinedInterceptor implements MethodInterceptor {

@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * SpringBoot 启动类
  *
- * @author Glenn
- * @since 2017-03-25
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SpringBootApplication
 public class ApplicationMain {

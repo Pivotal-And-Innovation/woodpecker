@@ -10,8 +10,8 @@ import java.util.List;
 /**
  * 生成excel表工具类
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 public final class ExcelBuilder {
 

@@ -3,8 +3,8 @@ package com.woodpecker.jvm.proxy.stat;
 /**
  * 静态代理测试
  *
- * @author Glenn
- * @since 2017-04-12
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("all")
 public class StaticProxyTest {

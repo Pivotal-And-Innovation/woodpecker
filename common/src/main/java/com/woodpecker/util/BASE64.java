@@ -5,8 +5,8 @@ import org.apache.commons.codec.binary.Base64;
 /**
  * 封装的Base64编码工具类
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 public final class BASE64 {
     /**

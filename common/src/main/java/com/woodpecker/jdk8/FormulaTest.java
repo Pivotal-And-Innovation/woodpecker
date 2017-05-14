@@ -3,8 +3,8 @@ package com.woodpecker.jdk8;
 /**
  * 测试接口中默认方法实现
  *
- * @author Glenn
- * @since 2017-04-06
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class FormulaTest {
 

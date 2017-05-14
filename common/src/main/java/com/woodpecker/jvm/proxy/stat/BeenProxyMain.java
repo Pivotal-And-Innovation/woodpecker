@@ -7,8 +7,8 @@ package com.woodpecker.jvm.proxy.stat;
  * 1、隐藏委托类的实现<br>
  * 2、解耦，不改变委托类代码情况下做一些额外处理，比如添加初始判断及其他公共操作
  *
- * @author Glenn
- * @since 2017-04-12
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("all")
 public class BeenProxyMain {

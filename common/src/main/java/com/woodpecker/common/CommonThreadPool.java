@@ -9,8 +9,8 @@ import javax.annotation.PostConstruct;
 /**
  * 包装过的线程池
  *
- * @author Glenn
- * @since 2017-03-28
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class CommonThreadPool {
     /**

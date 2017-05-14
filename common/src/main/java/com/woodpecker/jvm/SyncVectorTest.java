@@ -6,8 +6,8 @@ import java.util.Vector;
  * if one class's methods are decorated by key word {@code synchronized}, don't mean that calling these methods doesn't
  * need any extra synchronized measures any more.
  *
- * @author Glenn
- * @since 2017-03-17
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("all")
 public class SyncVectorTest {

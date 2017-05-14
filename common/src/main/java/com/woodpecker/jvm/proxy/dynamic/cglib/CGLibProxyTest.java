@@ -3,8 +3,8 @@ package com.woodpecker.jvm.proxy.dynamic.cglib;
 /**
  * CGLib动态代理测试
  *
- * @author Glenn
- * @since 2017-04-12
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class CGLibProxyTest {
     public static void main(String[] args) {

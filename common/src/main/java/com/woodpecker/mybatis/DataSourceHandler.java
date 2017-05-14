@@ -3,8 +3,8 @@ package com.woodpecker.mybatis;
 /**
  * 数据源配置
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 final class DataSourceHandler {
     /**

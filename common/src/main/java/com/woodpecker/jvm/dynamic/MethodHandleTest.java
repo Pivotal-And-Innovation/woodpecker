@@ -8,8 +8,8 @@ import java.lang.invoke.MethodType;
 /**
  * Method Handle 基础用法演示
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class MethodHandleTest {
 

@@ -11,8 +11,8 @@ import java.io.StringWriter;
 /**
  * 记录日志工具类
  *
- * @author Glenn
- * @since 2017-03-25
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("unused")
 public final class Logger {

@@ -8,8 +8,8 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * 自定义bean工厂
  *
- * @author Glenn
- * @since 2017-03-25
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class CommonBeanFactory implements ApplicationContextAware {
 

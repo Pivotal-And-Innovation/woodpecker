@@ -9,8 +9,8 @@ import org.springframework.stereotype.Controller;
 /**
  * 项目配置-扫描注册根目录下所有的bean，同时配置一些小规模零散的bean
  *
- * @author Glenn
- * @since 2017-03-29
+ * @author Relax
+ * @since 2017年03月30日
  */
 @Configuration
 @ComponentScan(basePackageClasses = {ApplicationMain.class}, excludeFilters = @ComponentScan.Filter({Controller.class,

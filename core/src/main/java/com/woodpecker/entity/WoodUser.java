@@ -9,8 +9,8 @@ import java.util.Date;
  * 用户信息模型类
  * 实验结论：这@Builder有点玄乎啊，测试运行时报错。。。1、实际参数列表和形式参数列表长度不同。。。2、找不到builder()符号引用。。。
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("all")
 @Data
@@ -132,7 +132,7 @@ public class WoodUser {
 
     public static void main(String[] args) {
         // 验证链式调用
-        WoodUser info = new WoodUser("dyeDha").setEmail("422624843@qq.com").setName("Glenn").setNickname("就是帅！");
+        WoodUser info = new WoodUser("dyeDha").setEmail("422624843@qq.com").setName("Relax").setNickname("就是帅！");
         System.out.println(info.toString());
 
         // 验证必要带有必须参数的构造器
@@ -140,11 +140,11 @@ public class WoodUser {
         System.out.println(userInfo.toString());
 
         // 验证构建器模式-测试不通过
-//        WoodUser woodUserInfo = WoodUser.builder().password("343543463").name("Glenn").build();
+//        WoodUser woodUserInfo = WoodUser.builder().password("343543463").name("Relax").build();
 //        System.out.println(woodUserInfo.toString());
 
         // 验证自己写的标准的构建器模式
-        WoodUser info1 = new WoodUser.Builder("thy", "2323243546577878979").name("Glenn").email("422624843@qq.com").build();
+        WoodUser info1 = new WoodUser.Builder("thy", "2323243546577878979").name("Relax").email("422624843@qq.com").build();
         System.out.println(info1.toString());
     }
 

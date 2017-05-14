@@ -5,13 +5,12 @@ import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 个人信息传输模型
  *
- * @author Glenn
- * @since 2017-03-30
+ * @author Relax
+ * @since 2017年03月30日
  */
 @Data
 @Accessors(chain = true)

@@ -3,8 +3,8 @@ package com.woodpecker.jvm.dispatch;
 /**
  * 单分派、多分派演示
  *
- * @author Glenn
- * @since 2017-03-24
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class DispatchTest {
 

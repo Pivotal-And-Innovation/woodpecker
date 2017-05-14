@@ -31,7 +31,7 @@
     <developers>
         <developer>
             <id>22</id>
-            <name>Glenn</name>
+            <name>Relax</name>
             <email>422624843@qq.com</email>
             <url>https://glenen.github.io/</url>
             <organization>Pivotal-And-Innovation</organization>
@@ -90,6 +90,7 @@
                 </exclusions>
             </dependency>
             <!--spring大家族-->
+
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aop</artifactId>

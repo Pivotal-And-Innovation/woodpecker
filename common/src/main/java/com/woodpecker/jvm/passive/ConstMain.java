@@ -1,8 +1,8 @@
 package com.woodpecker.jvm.passive;
 
 /**
- * @author Glenn
- * @since 2017-03-23
+ * @author Relax
+ * @since 2017年03月30日
  */
 class ConstMain {
     static {

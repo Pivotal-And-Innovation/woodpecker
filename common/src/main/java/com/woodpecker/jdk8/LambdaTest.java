@@ -8,8 +8,8 @@ import java.util.List;
 /**
  * lambda相关测试：链表排序
  *
- * @author Glenn
- * @since 2017-04-06
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("all")
 public class LambdaTest {

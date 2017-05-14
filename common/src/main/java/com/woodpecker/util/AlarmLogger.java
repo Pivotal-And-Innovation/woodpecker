@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 报警日志工具类
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 public final class AlarmLogger {
 

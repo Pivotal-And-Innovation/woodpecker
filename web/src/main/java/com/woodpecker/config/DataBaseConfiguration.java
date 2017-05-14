@@ -14,8 +14,8 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 /**
  * 数据库配置 体验：就自己动手配置这么多而言，感觉javaConfig给人的感觉更清新整洁，与spring整体融合也更好。XML配置更加具有层次感，解耦，标签识别能力很强大。就是看自己需求。
  *
- * @author Glenn
- * @since 2017-03-29
+ * @author Relax
+ * @since 2017年03月30日
  */
 //@Configuration
 //@MapperScan(basePackages = {"com.woodpecker.mapper"})

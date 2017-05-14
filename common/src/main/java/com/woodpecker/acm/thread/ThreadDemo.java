@@ -3,8 +3,8 @@ package com.woodpecker.acm.thread;
 /**
  * Thread Demo：两个线程交替打印奇数和偶数
  *
- * @author Glenn
- * @since 2017-03-28
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class ThreadDemo {
 

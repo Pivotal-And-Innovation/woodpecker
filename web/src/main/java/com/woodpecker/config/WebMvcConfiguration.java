@@ -23,8 +23,8 @@ import org.thymeleaf.templateresolver.TemplateResolver;
  * 如果想保留Spring Boot MVC的特性，并只是添加其他的MVC配置(拦截器，formatter，视图控制器等)，
  * 继承WebMvcConfigurerAdapter 并重写其中的一些方法添加自己想要的@Bean即可
  *
- * @author Glenn
- * @since 2017-03-29
+ * @author Relax
+ * @since 2017年03月30日
  */
 @Configuration
 @EnableWebMvc

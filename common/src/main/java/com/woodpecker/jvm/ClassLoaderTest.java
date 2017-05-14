@@ -6,8 +6,8 @@ import java.io.InputStream;
 /**
  * 类加载器与instanceof关键字演示
  *
- * @author Glenn
- * @since 2017-03-19
+ * @author Relax
+ * @since 2017年03月30日
  */
 public class ClassLoaderTest {
 

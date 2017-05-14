@@ -12,8 +12,8 @@ import java.util.Map;
 /**
  * 图库边定义实体
  *
- * @author Glenn
- * @since 2017-03-30
+ * @author Relax
+ * @since 2017年03月30日
  */
 @Setter
 @Getter

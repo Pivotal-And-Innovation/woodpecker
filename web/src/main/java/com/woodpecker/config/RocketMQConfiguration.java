@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 /**
  * RocketMQ 配置
  *
- * @author Glenn
- * @since 2017-03-31
+ * @author Relax
+ * @since 2017年03月30日
  */
 @Configuration
 class RocketMQConfiguration {

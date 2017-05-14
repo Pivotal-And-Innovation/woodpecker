@@ -6,8 +6,8 @@ import java.security.NoSuchAlgorithmException;
 /**
  * MD5加密工具类：单向散列加密，可添加slot增强加密
  *
- * @author Glenn
- * @since 2017-03-27
+ * @author Relax
+ * @since 2017年03月30日
  */
 public final class MD5 {
 

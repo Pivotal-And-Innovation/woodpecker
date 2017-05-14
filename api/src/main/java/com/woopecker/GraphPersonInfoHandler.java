@@ -8,8 +8,8 @@ import java.util.Map;
 /**
  * 用户个人信息处理接口
  *
- * @author Glenn
- * @since 2017-03-30
+ * @author Relax
+ * @since 2017年03月30日
  */
 public interface GraphPersonInfoHandler {
     /**

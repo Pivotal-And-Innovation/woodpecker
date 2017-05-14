@@ -7,8 +7,8 @@ import java.util.Stack;
 /**
  * 二叉树的借助栈结构、及神级方法的先中后序遍历
  *
- * @author Glenn
- * @since 2017-03-25
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("all")
 public class BinaryTreeTraversal {

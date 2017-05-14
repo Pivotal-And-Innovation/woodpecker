@@ -6,8 +6,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 自定义线程工厂：可控的线程名字和线程守护性
  *
- * @author Glenn
- * @since 2017-03-25
+ * @author Relax
+ * @since 2017年03月30日
  */
 @SuppressWarnings("unused")
 public class CommonThreadFactory implements ThreadFactory {

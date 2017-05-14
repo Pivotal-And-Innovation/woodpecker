@@ -25,4 +25,17 @@
         <setting name="defaultStatementTimeout" value="25000" />
     </settings>
 
+    <environments default="">
+        <environment id="">
+            <transactionManager type=""></transactionManager>
+            <dataSource type="">
+                <property name="driverclassname" value=""></property>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+
+    </mappers>
+
 </configuration>
