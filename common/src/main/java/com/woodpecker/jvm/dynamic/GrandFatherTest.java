@@ -8,7 +8,7 @@ import java.lang.invoke.MethodType;
 /**
  * 子类调用祖类方法演示
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("unused")

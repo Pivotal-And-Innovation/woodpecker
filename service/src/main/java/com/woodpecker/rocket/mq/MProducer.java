@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 /**
  * 消息生产者:Demo
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class MProducer {

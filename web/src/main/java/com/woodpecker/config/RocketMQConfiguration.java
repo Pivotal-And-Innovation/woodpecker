@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * RocketMQ 配置
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @Configuration

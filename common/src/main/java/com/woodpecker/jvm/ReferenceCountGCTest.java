@@ -3,7 +3,7 @@ package com.woodpecker.jvm;
 /**
  * 演示JVM没有通过计算计数算法来判断对象的存活：解决相互引用问题
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("all")

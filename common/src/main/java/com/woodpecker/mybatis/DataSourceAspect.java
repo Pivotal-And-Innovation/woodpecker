@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
  * 切换数据源
  * 请注意：这里order一定要小于tx:annotation-driven的order，即先执行DataSourceAspect切面，再执行事务切面，才能获取到最终的数据源
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @Order(1)

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 用户标签信息处理接口
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public interface GraphTagInfoHandler {

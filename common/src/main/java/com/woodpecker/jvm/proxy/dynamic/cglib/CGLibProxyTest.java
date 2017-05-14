@@ -3,7 +3,7 @@ package com.woodpecker.jvm.proxy.dynamic.cglib;
 /**
  * CGLib动态代理测试
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class CGLibProxyTest {

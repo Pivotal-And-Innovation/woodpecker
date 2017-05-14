@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 图库边定义实体
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @Setter

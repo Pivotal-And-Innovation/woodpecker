@@ -6,7 +6,7 @@ import com.woodpecker.orientdb.entity.VertexDefinition;
 /**
  * orientDB图库对接接口
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public interface OrientDBInterface {

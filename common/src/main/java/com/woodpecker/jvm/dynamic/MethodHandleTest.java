@@ -8,7 +8,7 @@ import java.lang.invoke.MethodType;
 /**
  * Method Handle 基础用法演示
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class MethodHandleTest {

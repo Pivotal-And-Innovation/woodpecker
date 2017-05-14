@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 被代理类实现接口
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class BeenProxyMain implements ProxyInterface {

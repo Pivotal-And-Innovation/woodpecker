@@ -3,7 +3,7 @@ package com.woodpecker.jdk8;
 /**
  * 测试接口中默认方法实现
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class FormulaTest {

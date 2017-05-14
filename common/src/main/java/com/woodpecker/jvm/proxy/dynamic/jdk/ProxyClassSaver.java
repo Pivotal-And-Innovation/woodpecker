@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * 保存动态生成的代理类
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("all")

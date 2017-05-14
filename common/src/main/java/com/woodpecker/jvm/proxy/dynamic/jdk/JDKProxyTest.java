@@ -5,7 +5,7 @@ import java.lang.reflect.Proxy;
 /**
  * JDK动态代理测试类：动态代理实现实际是双层的静态代理
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class JDKProxyTest {

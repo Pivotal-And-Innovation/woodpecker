@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * 图库顶点定义实体
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @Data

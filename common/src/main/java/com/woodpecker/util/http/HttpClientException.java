@@ -3,7 +3,7 @@ package com.woodpecker.util.http;
 /**
  * http请求异常
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class HttpClientException extends RuntimeException {

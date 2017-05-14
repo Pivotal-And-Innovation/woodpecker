@@ -6,7 +6,7 @@ import java.text.StringCharacterIterator;
 /**
  * JSON格式字符串验证器
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public final class JSONChecker {

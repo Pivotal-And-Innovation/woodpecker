@@ -11,7 +11,7 @@ import java.io.StringWriter;
 /**
  * 记录日志工具类
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("unused")

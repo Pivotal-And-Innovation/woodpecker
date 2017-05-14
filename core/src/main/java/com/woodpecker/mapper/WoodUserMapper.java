@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 用户信息mapper代理
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public interface WoodUserMapper {

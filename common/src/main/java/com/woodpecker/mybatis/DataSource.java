@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 /**
  * 数据源注解
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @Target({ElementType.TYPE, ElementType.METHOD})

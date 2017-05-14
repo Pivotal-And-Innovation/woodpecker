@@ -3,7 +3,7 @@ package com.woodpecker.jdk8.FunctionalInterface;
 /**
  * 测试：：关键字调用构造方法
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("all")

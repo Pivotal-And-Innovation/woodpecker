@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 个人信息传输模型
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @Data

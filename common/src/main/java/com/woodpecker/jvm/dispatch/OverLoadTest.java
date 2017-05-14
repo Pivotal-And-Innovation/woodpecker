@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 演示编译器如何确定一个更加合适的重载版本
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("unused")

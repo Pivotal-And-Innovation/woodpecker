@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 生成excel表工具类
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public final class ExcelBuilder {

@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * {@code GraphPersonInfoHandler} 具体实现
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class GraphPersonInfoHandlerImpl implements GraphPersonInfoHandler {

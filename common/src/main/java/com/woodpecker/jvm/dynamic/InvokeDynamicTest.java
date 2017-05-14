@@ -8,7 +8,7 @@ import java.lang.invoke.*;
  * invokeDynamic指令基础演示：该实例中的方法名称不能随意动，更不能把几个方法合并到一起，因为它们被INDY工具读取的。
  * 详解见P286
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("all")

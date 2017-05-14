@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
  * 调用代理对象的每个函数实际最终都是调用了InvocationHandler的invoke函数。<br>
  * 所以invoke函数中我们也可以通过对method做一些判断，从而对某些函数特殊处理。
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class DefinedHandler implements InvocationHandler {

@@ -8,7 +8,7 @@ import java.lang.reflect.UndeclaredThrowableException;
 /**
  * 动态生成的代理类：可观察其原理，本质还是通过反射机制
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("all")

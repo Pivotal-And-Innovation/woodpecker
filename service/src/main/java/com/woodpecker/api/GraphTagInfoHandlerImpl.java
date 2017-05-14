@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * {@code GraphTagInfoHandler} 具体实现
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class GraphTagInfoHandlerImpl implements GraphTagInfoHandler {

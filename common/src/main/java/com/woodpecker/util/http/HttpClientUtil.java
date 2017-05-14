@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * http请求工具类
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public final class HttpClientUtil {

@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * SpringBoot 启动类
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SpringBootApplication

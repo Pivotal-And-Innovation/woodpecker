@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * lambda相关测试：链表排序
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("all")

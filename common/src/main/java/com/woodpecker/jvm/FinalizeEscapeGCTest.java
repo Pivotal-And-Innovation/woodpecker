@@ -11,7 +11,7 @@ package com.woodpecker.jvm;
  * <p>1.一个对象当要被回收的时候可以逃逸.<br>
  * 2.一个对象只能有一次机会逃逸，因为finalize最多只能被系统调用一次.
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class FinalizeEscapeGCTest {

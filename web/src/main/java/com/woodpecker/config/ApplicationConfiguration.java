@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 /**
  * 项目配置-扫描注册根目录下所有的bean，同时配置一些小规模零散的bean
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @Configuration

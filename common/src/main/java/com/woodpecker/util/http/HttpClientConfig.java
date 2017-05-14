@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * http请求配置
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @Getter

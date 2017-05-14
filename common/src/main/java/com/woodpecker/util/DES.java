@@ -12,7 +12,7 @@ import javax.crypto.spec.SecretKeySpec;
 /**
  * DES加解密工具类
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public final class DES {

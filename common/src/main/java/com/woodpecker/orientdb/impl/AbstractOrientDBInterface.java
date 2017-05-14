@@ -7,7 +7,7 @@ import com.woodpecker.orientdb.entity.VertexDefinition;
 /**
  * {@code OrientDBInterface} 骨架实现
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class AbstractOrientDBInterface implements OrientDBInterface {

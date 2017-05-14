@@ -8,7 +8,7 @@ package com.woodpecker.jvm;
 /**
  * Thread 测试
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class SyncThreadTest {

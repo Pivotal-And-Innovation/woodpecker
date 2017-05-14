@@ -3,7 +3,7 @@ package com.woodpecker.jdk8.FunctionalInterface;
 /**
  * 测试函数式接口
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("all")

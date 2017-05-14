@@ -6,7 +6,7 @@ package com.woodpecker.jvm;
  * 但不推荐：1、编码角度而言，以恰当的变量作用域来控制变量回收时间才是最优雅的解决办法；2、赋null值的操作来优化内存回收是建立在对字节码执行引擎概念模型的理解
  * 之上的。
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("unused")

@@ -5,7 +5,7 @@ import org.apache.commons.codec.binary.Base64;
 /**
  * 封装的Base64编码工具类
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public final class BASE64 {

@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 用户个人信息处理接口
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public interface GraphPersonInfoHandler {

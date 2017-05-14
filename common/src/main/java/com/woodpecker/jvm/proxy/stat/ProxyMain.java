@@ -3,7 +3,7 @@ package com.woodpecker.jvm.proxy.stat;
 /**
  * 代理类
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("all")

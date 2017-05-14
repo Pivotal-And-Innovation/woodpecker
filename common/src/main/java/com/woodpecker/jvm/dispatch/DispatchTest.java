@@ -3,7 +3,7 @@ package com.woodpecker.jvm.dispatch;
 /**
  * 单分派、多分派演示
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class DispatchTest {

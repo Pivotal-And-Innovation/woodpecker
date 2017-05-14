@@ -3,7 +3,7 @@ package com.woodpecker.jvm.dispatch;
 /**
  * 方法静态分派演示
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 @SuppressWarnings("unused")

@@ -1,7 +1,7 @@
 package com.woodpecker.jvm.passive;
 
 /**
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 class subMain extends SuperMain {

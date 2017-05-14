@@ -6,7 +6,7 @@ import java.io.InputStream;
 /**
  * 类加载器与instanceof关键字演示
  *
- * @author Relax
+ * @author Relaxier
  * @since 2017年03月30日
  */
 public class ClassLoaderTest {
